@@ -1,0 +1,19 @@
+{
+  "name": "Training Extension",
+  "description": "A simple extension to help get me familiar with how chrome extensions work",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js": [ "content.js" ]
+        }
+    ],
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ]
+}
